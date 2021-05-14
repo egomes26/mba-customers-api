@@ -24,7 +24,7 @@ public class CustomerController {
     @ResponseBody
     @ResponseStatus(code= HttpStatus.CREATED)
     public ResponseDTO<CustomerDTO> save(@RequestBody CustomerDTO customer) {
-//		log.info("salvando armas...");
+
         ResponseDTO<CustomerDTO> responseDTO = new ResponseDTO<CustomerDTO>();
         responseDTO.setData(service.save(customer));
         return responseDTO;

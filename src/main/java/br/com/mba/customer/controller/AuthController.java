@@ -32,7 +32,6 @@ public class AuthController {
     @PostMapping
     @ResponseBody
     public ResponseEntity<TokenDTO> auth(@RequestBody LoginDTO login) {
-//		log.info("salvando armas...");
         UsernamePasswordAuthenticationToken loginData = login.convert();
         try {
             Authentication authentication = authManager.authenticate(loginData);
